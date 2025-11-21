@@ -1,4 +1,4 @@
-package edu.ntu.bykov.lr1;
+package edu.ntu.bykov.lr2;
 
 import java.util.Scanner;
 import java.util.Random;
