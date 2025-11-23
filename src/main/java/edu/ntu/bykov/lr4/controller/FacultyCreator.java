@@ -1,9 +1,9 @@
-package edu.ntu.bykov.lr3.controller;
+package edu.ntu.bykov.lr4.controller;
 
-import edu.ntu.bykov.lr3.model.Department;
-import edu.ntu.bykov.lr3.model.Faculty;
-import edu.ntu.bykov.lr3.model.Human;
-import edu.ntu.bykov.lr3.model.University;
+import edu.ntu.bykov.lr4.model.Department;
+import edu.ntu.bykov.lr4.model.Faculty;
+import edu.ntu.bykov.lr4.model.Human;
+import edu.ntu.bykov.lr4.model.University;
 
 public class FacultyCreator {
 

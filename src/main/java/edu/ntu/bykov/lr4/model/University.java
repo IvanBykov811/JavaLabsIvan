@@ -1,7 +1,8 @@
-package edu.ntu.bykov.lr3.model;
+package edu.ntu.bykov.lr4.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class University extends OrganizationalUnit {
     private final List<Faculty> faculties = new ArrayList<>();
@@ -16,5 +17,17 @@ public class University extends OrganizationalUnit {
 
     public void addFaculty(Faculty faculty) {
         faculties.add(faculty);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!super.equals(o)) return false;
+        University that = (University) o;
+        return Objects.equals(faculties, that.faculties);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), faculties);
     }
 }

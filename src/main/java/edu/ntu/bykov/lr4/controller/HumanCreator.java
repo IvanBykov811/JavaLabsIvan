@@ -1,7 +1,7 @@
-package edu.ntu.bykov.lr3.controller;
+package edu.ntu.bykov.lr4.controller;
 
-import edu.ntu.bykov.lr3.model.Human;
-import edu.ntu.bykov.lr3.model.Sex;
+import edu.ntu.bykov.lr4.model.Human;
+import edu.ntu.bykov.lr4.model.Sex;
 
 public class HumanCreator {
 

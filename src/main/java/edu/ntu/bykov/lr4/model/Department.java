@@ -1,7 +1,8 @@
-package edu.ntu.bykov.lr3.model;
+package edu.ntu.bykov.lr4.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Department extends OrganizationalUnit {
     private final List<Group> groups = new ArrayList<>();
@@ -16,5 +17,17 @@ public class Department extends OrganizationalUnit {
 
     public void addGroup(Group group) {
         groups.add(group);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!super.equals(o)) return false;
+        Department that = (Department) o;
+        return Objects.equals(groups, that.groups);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), groups);
     }
 }

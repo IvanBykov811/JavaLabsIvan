@@ -1,7 +1,7 @@
-package edu.ntu.bykov.lr3;
+package edu.ntu.bykov.lr4;
 
-import edu.ntu.bykov.lr3.controller.UniversityCreator;
-import edu.ntu.bykov.lr3.model.*;
+import edu.ntu.bykov.lr4.controller.UniversityCreator;
+import edu.ntu.bykov.lr4.model.*;
 
 public class Run {
 
@@ -11,26 +11,58 @@ public class Run {
     }
 
     public static University createTypycalUniversity() {
-        Human rector = new Human("Іван", "Петров", "Іванович", Sex.MALE) {};
-        UniversityCreator universityCreator = new UniversityCreator();
-        University university = universityCreator.createUniversity(
-                "Національний технічний університет", rector);
 
-        Human dean = new Human("Марія", "Коваленко", "Петрівна", Sex.FEMALE) {};
-        Faculty faculty = universityCreator.createFacultyInUniversity(
-                university, "Факультет комп'ютерних наук", dean);
+        UniversityCreator creator = new UniversityCreator();
 
-        Human headDepartment = new Human("Олег", "Сидоренко", "Вікторович", Sex.MALE) {};
-        Department department = universityCreator
+        Human rector = new Human(
+                "Іван",
+                "Петров",
+                "Іванович",
+                Sex.MALE
+        );
+
+        University university = creator.createUniversity(
+                "Національний технічний університет",
+                rector
+        );
+
+        Human dean = new Human(
+                "Марія",
+                "Коваленко",
+                "Петрівна",
+                Sex.FEMALE
+        );
+
+        Faculty faculty = creator.createFacultyInUniversity(
+                university,
+                "Факультет комп'ютерних наук",
+                dean
+        );
+
+        Human headDepartment = new Human(
+                "Олег",
+                "Сидоренко",
+                "Вікторович",
+                Sex.MALE
+        );
+
+        Department department = creator
                 .getFacultyCreator()
+                .getDepartmentCreator()
                 .createDepartmentInFaculty(
                         faculty,
                         "Кафедра програмної інженерії",
                         headDepartment
                 );
 
-        Human headGroup = new Human("Наталія", "Іваненко", "Олександрівна", Sex.FEMALE) {};
-        Group group = universityCreator
+        Human headGroup = new Human(
+                "Наталія",
+                "Іваненко",
+                "Олександрівна",
+                Sex.FEMALE
+        );
+
+        Group group = creator
                 .getFacultyCreator()
                 .getDepartmentCreator()
                 .createGroupInDepartment(
@@ -39,14 +71,13 @@ public class Run {
                         headGroup
                 );
 
-        var groupCreator = universityCreator
+        var groupCreator = creator
                 .getFacultyCreator()
                 .getDepartmentCreator()
                 .getGroupCreator();
 
         groupCreator.addStudent(group, "Андрій", "Мельник", "Ігорович", Sex.MALE);
         groupCreator.addStudent(group, "Оксана", "Шевченко", "Іванівна", Sex.FEMALE);
-        groupCreator.addStudent(group, "Дмитро", "Гриценко", "Андрійович", Sex.MALE);
 
         return university;
     }
