@@ -1,0 +1,56 @@
+{
+  "faculties": [
+    {
+      "departments": [
+        {
+          "groups": [
+            {
+              "students": [
+                {
+                  "firstName": "Андрій",
+                  "lastName": "Мельник",
+                  "middleName": "Ігорович",
+                  "sex": "MALE"
+                },
+                {
+                  "firstName": "Оксана",
+                  "lastName": "Шевченко",
+                  "middleName": "Іванівна",
+                  "sex": "FEMALE"
+                }
+              ],
+              "name": "КН-21",
+              "head": {
+                "firstName": "Наталія",
+                "lastName": "Іваненко",
+                "middleName": "Олександрівна",
+                "sex": "FEMALE"
+              }
+            }
+          ],
+          "name": "Кафедра програмної інженерії",
+          "head": {
+            "firstName": "Олег",
+            "lastName": "Сидоренко",
+            "middleName": "Вікторович",
+            "sex": "MALE"
+          }
+        }
+      ],
+      "name": "Факультет комп\u0027ютерних наук",
+      "head": {
+        "firstName": "Марія",
+        "lastName": "Коваленко",
+        "middleName": "Петрівна",
+        "sex": "FEMALE"
+      }
+    }
+  ],
+  "name": "Національний технічний університет",
+  "head": {
+    "firstName": "Іван",
+    "lastName": "Петров",
+    "middleName": "Іванович",
+    "sex": "MALE"
+  }
+}
