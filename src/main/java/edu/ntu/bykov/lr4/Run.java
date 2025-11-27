@@ -6,11 +6,11 @@ import edu.ntu.bykov.lr4.model.*;
 public class Run {
 
     public static void main(String[] args) {
-        University university = createTypycalUniversity();
+        University university = createTypicalUniversity();
         printUniversityInfo(university);
     }
 
-    public static University createTypycalUniversity() {
+    public static University createTypicalUniversity() {
 
         UniversityCreator creator = new UniversityCreator();
 
