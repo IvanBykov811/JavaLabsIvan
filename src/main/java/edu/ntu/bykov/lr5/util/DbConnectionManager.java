@@ -9,7 +9,7 @@ public class DbConnectionManager {
     private static final String URL =
             "jdbc:postgresql://localhost:5432/students_db";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "postgres"; // змінити на свій
+    private static final String PASSWORD = "1234"; // змінити на свій
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
